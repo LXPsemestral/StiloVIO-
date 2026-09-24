@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StiloVIO | Carrito</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/productos.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="contenedor navegacion" aria-label="Menú principal">
+      <a class="logo" href="index.html">StiloVIO</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+        <li><a href="carrito.html" aria-current="page" class="activo">Carrito (<span class="contador">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor seccion">
+    <h1>Tu carrito</h1>
+    <section id="lista-carrito" aria-label="Productos añadidos"></section>
+    <p id="total" class="total"></p>
+    <button id="vaciar" class="boton boton-gris" type="button">Vaciar carrito</button>
+  </main>
+
+  <footer class="pie"><div class="contenedor"><p>© 2026 StiloVIO · Tienda de Ropa Unisex · Marca Local </p><a href="contacto.html">Contáctanos</a></div></footer>
+</body>
+</html>
