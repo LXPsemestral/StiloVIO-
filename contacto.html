@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StiloVIO | Contacto</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/productos.js" defer></script>
+  <script src="js/contacto.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="contenedor navegacion" aria-label="Menú principal">
+      <a class="logo" href="index.html">StiloVIO</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html" aria-current="page" class="activo">Contáctanos</a></li>
+        <li><a href="carrito.html">Carrito (<span class="contador">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor seccion">
+    <h1>Contáctanos</h1>
+    <p>Todos los campos principales son obligatorios.</p>
+
+    <form id="formulario" novalidate>
+      <label for="nombre">Nombre completo</label>
+      <input id="nombre" name="nombre" type="text" maxlength="100"
+             placeholder="Ej.: Ana Pérez" autocomplete="name" aria-describedby="error-nombre">
+      <small id="error-nombre" class="error" aria-live="polite"></small>
+
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" name="correo" type="email" maxlength="100"
+             placeholder="nombre@duoc.cl" autocomplete="email"
+             aria-describedby="ayuda-correo error-correo">
+      <small id="ayuda-correo">Permitidos: @duoc.cl, @profesor.duoc.cl y @gmail.com</small>
+      <small id="error-correo" class="error" aria-live="polite"></small>
+
+      <label for="motivo">Motivo de contacto (opcional)</label>
+      <select id="motivo" name="motivo">
+        <option value="consulta">Consulta</option>
+        <option value="pedido">Consulta por pedido</option>
+        <option value="talla">Consulta por tallas</option>
+        <option value="reportar">Reportar un error</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="mensaje">Comentario o mensaje</label>
+      <textarea id="mensaje" name="mensaje" maxlength="500" rows="5"
+                placeholder="Escribe tu mensaje..."
+                aria-describedby="contador-mensaje error-mensaje"></textarea>
+      <small id="contador-mensaje">0/500 caracteres</small>
+      <small id="error-mensaje" class="error" aria-live="polite"></small>
+
+      <button class="boton" type="submit">Enviar mensaje</button>
+      <p id="resultado" role="status" aria-live="polite"></p>
+    </form>
+    <p class="nota">Proyecto y Prototipo Educativo: el formulario no envía mensajes reales.</p>
+  </main>
+
+  <footer class="pie"><div class="contenedor"><p>© 2026 StiloVIO · Tienda de ropa</p><a href="contacto.html">Contacto</a></div></footer>
+</body>
+</html>
